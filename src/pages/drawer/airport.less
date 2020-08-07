@@ -1,0 +1,155 @@
+.drawer{
+  background: #313131;
+  opacity: 0.9;
+  height: 100%;
+  width: 18.2%;
+  z-index: 998;
+  position:fixed;
+  padding: 5px 15px;
+  box-shadow: 5px 1px 15px  #222;
+  // 顶栏
+  .title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #EFEFEF;
+    line-height: 30px;
+    height: 30px;
+    font-size: 14px;
+    img {
+      height: 12px;
+      cursor: pointer;
+      padding: 3px;
+
+      &:hover{
+        background-color: #F54C4C;
+      }
+    }
+
+    border-bottom: 1px solid #3A3A3A;
+  }
+  // 三字码/四字码
+  .airport_code{
+    color: #F0B100;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 28px;
+    height: 40px;
+    line-height: 40px;
+
+    .divider {
+      margin: 0 8px;
+    }
+  }
+  .airport_status {
+    color: #EFEFEF;
+    font-size: 16px;
+    display: block;
+    border: 1px solid #2F60C6;
+    width: 60px;
+    text-align: center;
+    font-size: 14px;
+    height: 24px;
+    line-height: 24px;
+    border-radius: 10%;
+    float: right;
+    transform: translateY(8px);
+  }
+  // 天气
+  .weather_wrapper{
+    .desc {
+      color: #ccc;
+      font-size: 12px;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      line-height: 30px;
+    }
+    .icon {
+      height: 80px;
+      margin: 10px 0;
+      border:1px solid red;
+      display: flex;
+      justify-content: space-around;
+    }
+  }
+  // 机场动态
+  .airport_info {
+    .head {
+      display: flex;
+      justify-content: space-between;
+      color: #666;
+      .switch {
+        width: 50%;
+        display: flex;
+        justify-content: flex-end;
+
+        div{
+          width: 50px;
+          text-align: center;
+          display: block;
+          transform: skewX(-20deg);
+          background-color: rgba(85,118,171,.2);
+          padding: 3px 5px;
+          height: 20px;
+          line-height: 20px;
+          border: 1px solid #5576ab;
+          color: #c9ced6;
+          font-size: 12px;
+        }
+
+        .active {
+          background-color: #297aff;
+          color: #FFF;
+        }
+      }
+    }
+  }
+
+  // 机场动态表格查询tab
+  .tab{
+    color: #c9ced6;
+    font-size: 12px;
+    height: 36px;
+    line-height: 36px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    background: #222;
+    border-radius: 5px;
+    margin: 10px auto;
+    color:#888;
+
+    div{
+      width: 20%;
+      display: block;
+      text-align: center;
+    }
+
+    .active{
+      background: rgba(0,0,0,.5);
+      color: #FFF;
+    }
+  }
+  // 表格数据
+  .table{
+    width: 100%;
+    font-size: 12px;
+    color: #888;
+    font-weight: normal;
+    background: rgba(0,0,0,.5);
+    padding: 3px;
+
+    th{
+      color: #F0B100;
+    }
+
+    th, td {
+      border-bottom: 1px solid #666;
+      padding: 5px 0;
+      text-align: center;
+    }
+
+  }
+
+}
