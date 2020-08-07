@@ -2,14 +2,17 @@ import React from 'react';
 import close from '@/assets/close.svg';
 import drawerstyle from './airport.less';
 
-export default () => {
+export default (props) => {
+
+  const { handleClose } = props;
+
   return (
     <div className={drawerstyle.drawer}>
 
     {/* 标题 */}
     <div className={drawerstyle.title}>
-      <label>我是标题</label>
-      <img src={close} className={drawerstyle.close} />
+      <label>机场名称</label>
+      <img src={close} className={drawerstyle.close} onClick={ () => handleClose() }/>
     </div>
     {/* 三字码 */}
     <div>
@@ -49,13 +52,15 @@ export default () => {
     </div>
 
     {/* 表格 */}
-    <table className={drawerstyle.table} cellspacing="0" cellpadding="0" border="0">
+    <table className={drawerstyle.table} cellSpacing="0" cellPadding="0" border="0">
       <thead>
-        <th>航班号</th>
-        <th>到达地</th>
-        <th>计划起飞</th>
-        <th>实际起飞</th>
-        <th>状态</th>
+        <tr>
+          <th>航班号</th>
+          <th>到达地</th>
+          <th>计划起飞</th>
+          <th>实际起飞</th>
+          <th>状态</th>
+        </tr>
       </thead>
 
       <tbody>

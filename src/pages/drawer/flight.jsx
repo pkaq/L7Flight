@@ -1,10 +1,9 @@
 import React from 'react';
 import close from '@/assets/close.svg';
-import cx from 'classnames';
 import css from './flight.less';
 
-
-export default () => {
+export default (props) => {
+  const { handleClose } = props;
   return (
     <>
       <div className={css.flight_info}>
@@ -17,7 +16,7 @@ export default () => {
           {/* 标题 */}
           <div className={css.title}>
             <label>航班动态</label>
-            <img src={close} className={css.close} />
+            <img src={close} className={css.close} onClick={() => handleClose()} />
           </div>
 
           {/* 主体内容 */}

@@ -26,7 +26,8 @@ export function getFlightLine(data){
 
     const orign = array[0].lngLat;
 
-    const geo = lineString([orign, item.lngLat], {"name": item.name})
+    const geo = lineString([orign, item.lngLat],
+                           {"name": item.name, "flight": item.flight, "code" : item.code})
     geoData.features.push(geo);
   });
   return geoData;
