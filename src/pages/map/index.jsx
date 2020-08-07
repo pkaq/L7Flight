@@ -220,7 +220,6 @@ export default class App extends React.Component {
     })
   }
 
-
   // 关闭航班面板
   handleCloseFlight() {
     this.setState({
@@ -228,7 +227,6 @@ export default class App extends React.Component {
       flight_num: ''
     })
   }
-
 
   render() {
     const { airport, flight, airport_code, flight_num } = this.state;
