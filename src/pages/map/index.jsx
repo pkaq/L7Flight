@@ -98,7 +98,7 @@ export default class App extends React.Component {
         style: 'dark',
         // 设置地图中心
         center: [ 113.30294609, 23.38614342 ],
-        zoom: 6
+        zoom: 5
       })
     });
     scene.on('loaded', () => {
@@ -246,7 +246,7 @@ export default class App extends React.Component {
     }
     return (
       <>
-        <div id="map"></div>
+        <div id="map" className="map"></div>
         { airport && <Airport {...airport_porps} /> }
         { flight && <Flight {...flight_porps}/> }
       </>
