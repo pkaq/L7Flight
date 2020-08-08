@@ -1,6 +1,9 @@
 * {
   overflow: hidden;
 }
+html, body {
+  margin: 0;
+}
 .pop{
   max-width: 300px !important;
 }
