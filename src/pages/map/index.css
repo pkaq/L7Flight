@@ -33,3 +33,14 @@ html, body {
 .l7-marker > svg {
   height: 30px;
 }
+
+.l7-popup-tip{
+  border-top-color: rgba(0, 0, 0, 0.5) !important;
+  background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.l7-popup-content{
+  font-size: 12px;
+  color: #ccc;
+  background-color: rgba(0, 0, 0, 0.5)  !important;
+}

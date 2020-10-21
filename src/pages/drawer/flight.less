@@ -1,4 +1,4 @@
-.flight_info{
+.flight_info {
   position: fixed;
   bottom: 0;
   width: 1200px;
@@ -12,16 +12,16 @@
   // 主体内容
   .info_wrapper {
     height: 240px;
-    box-shadow: 5px 1px 15px  #222;
+    box-shadow: 5px 1px 15px #222;
     background: #313131;
     opacity: 0.9;
     padding: 5px;
     // 标题栏
-    .title{
+    .title {
       height: 30px;
-      label{
+      label {
         float: left;
-        color: #F0B100;
+        color: #f0b100;
         font-size: 14px;
       }
       img {
@@ -30,14 +30,14 @@
         cursor: pointer;
         padding: 3px;
 
-        &:hover{
-          background-color: #F54C4C;
+        &:hover {
+          background-color: #f54c4c;
         }
       }
-      border-bottom: 1px solid #3A3A3A;
+      border-bottom: 1px solid #3a3a3a;
     }
     // 主体部分
-    .body{
+    .body {
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -50,7 +50,7 @@
         justify-content: space-between;
         color: #888;
         width: 100%;
-        div{
+        div {
           display: block;
           width: 25%;
         }
@@ -59,10 +59,10 @@
           padding: 3px 0;
         }
         span {
-          color: #EFEFEF;
+          color: #efefef;
         }
       }
-      .col{
+      .col {
         height: 210px;
         padding: 5px;
         display: flex;
@@ -71,9 +71,10 @@
       }
 
       .title {
+        height: auto;
         display: flex;
         justify-content: flex-start;
-        img{
+        img {
           height: 40px;
         }
 
@@ -84,14 +85,14 @@
 
         // 航司
         .company {
-          color: #EFEFEF;
+          color: #efefef;
           width: 50px;
         }
         // 航班号
-        .flight_no{
+        .flight_no {
           height: 30px;
           line-height: 30px;
-          color: #F0B100;
+          color: #f0b100;
 
           .divider {
             margin: 0 8px;
@@ -99,27 +100,41 @@
         }
       }
       //
-      .flight_img{
+      .flight_img {
         text-align: center;
         width: 200px;
-        height: 150px ;
+        height: 150px;
       }
       // 航班动态详情
-      .detail_wrapper{
-        margin-top: 30px;
+      .detail_wrapper {
+        margin-top: 10px;
         display: flex;
         justify-content: space-between;
         font-size: 12px;
         color: #888;
         padding: 5px 0;
 
-        .code3{
-          color: #EFEFEF;
+        .code3 {
+          color: #efefef;
           font-size: 16px;
+        }
+
+        .portname {
           margin-bottom: 15px;
         }
-      }
 
+        .detail_arrow {
+          width: 80px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          svg {
+            width: 3em;
+            height: 3em;
+            color: #ccc;
+          }
+        }
+      }
     }
   }
 }
