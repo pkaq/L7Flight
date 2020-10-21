@@ -10,6 +10,7 @@ export default defineConfig({
   routes: [
     { path: '/', component: '@/pages/index' },
     { path: '/map', component: '@/pages/map' },
+    { path: '/c', component: '@/pages/drawer/chart' },
     { path: '/mapbox', component: '@/pages/mapbox' },
   ],
 });

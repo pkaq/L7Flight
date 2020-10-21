@@ -1,40 +1,25 @@
 import React from 'react';
 import {
-  G2,
   Chart,
-  Geom,
   Axis,
   Tooltip,
-  Coord,
-  Label,
   Legend,
-  View,
   Guide,
-  Shape,
-  Facet,
-  Util,
+  Geom,
   LineAdvance,
 } from 'bizcharts';
 
 const { Line } = Guide;
 
 const data = [
-  { dates: '00:39', first: 8647 },
-  { dates: '01:53', first: 8647 },
-  { dates: '13:57', first: 8156 },
-  { dates: '19:40', first: 8166 },
-  { dates: '20:59', first: 8956 },
-  { dates: '16:28', first: 8571 },
-  { dates: '18:06', first: 8771 },
+  { dates: '00:39', height: 8647 },
+  { dates: '01:53', height: 8647 },
+  { dates: '13:57', height: 8156 },
+  { dates: '19:40', height: 8166 },
+  { dates: '20:59', height: 8956 },
+  { dates: '16:28', height: 8571 },
+  { dates: '18:06', height: 8771 },
 ];
-
-/**
-1. 这里使用的是原始数据, 所以是 dates * first, 而格式化后的应该是 dates * value 把所有的 first 换成 value
-2. colors: 自己可定义, 看是否可以使用对象(以方便日后指定关键词的颜色对应)
-3. 上边数据中注释掉的是超出了 keywordTrend最小值和最大值范围之外的数据, 导致线太长出去了
-*/
-
-const colors = ['#1890ff', '#2fc25b'];
 
 const axisConfig = {
   label: {
@@ -60,43 +45,30 @@ const axisConfig = {
 
 export default class Series extends React.Component {
   render() {
-    const cols = {
-      dates: {
-        range: [0, 1],
-        type: 'timeCat',
-      },
-      first: {
-        min: 0, // 这里要设置一个最小值, 否则可能图表中按照了 keywordTrend 中的最小值设置Y轴最小值
+    const scale = {
+      height: {
+        tickCount: 10,
+        min: 0,
+        max: 12000,
       },
     };
 
     return (
-      <Chart data={data} scale={cols} autoFit>
+      <Chart data={data} autoFit padding={[20, 10, 50, 50]} scale={scale}>
         {/* 图例 */}
         <Legend />
         {/* 座标轴 */}
         <Axis name="dates" {...axisConfig} />
 
+        <Tooltip title="垂直高度" name="高度" />
+
         <LineAdvance
           point={{ size: 3 }}
           area
           shape="smooth"
-          position="dates*first"
+          position="dates*height"
           size={1}
-          label="dates"
         />
-
-        <Guide>
-          <Line
-            top
-            start={0}
-            end={10000}
-            lineStyle={{
-              lineWidth: 2,
-              stroke: '#1890ff',
-            }}
-          />
-        </Guide>
       </Chart>
     );
   }
