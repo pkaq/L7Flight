@@ -8,9 +8,7 @@ export default defineConfig({
     type: 'none',
   },
   routes: [
-    { path: '/', component: '@/pages/index' },
-    { path: '/map', component: '@/pages/map' },
-    { path: '/c', component: '@/pages/drawer/chart' },
+    { path: '/', component: '@/pages/map' },
     { path: '/mapbox', component: '@/pages/mapbox' },
   ],
 });
