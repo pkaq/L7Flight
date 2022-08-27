@@ -9,6 +9,7 @@ export default defineConfig({
   },
   routes: [
     { path: '/', component: '@/pages/map' },
+    { path: '/school', component: '@/pages/school' },
     { path: '/mapbox', component: '@/pages/mapbox' },
   ],
 });
