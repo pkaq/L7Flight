@@ -37,5 +37,6 @@
     "react-map-gl": "^5.2.7",
     "umi": "^3.2.14",
     "yorkie": "^2.0.0"
-  }
+  },
+  "packageManager": "yarn@3.2.3"
 }
